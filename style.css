@@ -1,0 +1,137 @@
+body{
+    width: 1440px;
+    height: 1024px;
+    background: #E5E5EC;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+.caja-texto-input{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 170px;
+
+    font-style: normal;
+    font-weight: 480;
+    font-size: 34px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.caja-output{
+    position: absolute;
+    width: 400px;
+    height: 944px;
+    right: 40px;
+    top: 40px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.munheco{
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    left: 32px;
+    top: 243px;
+}
+
+.caja-texto-output{
+    position: absolute;
+    width: 336px;
+    height: 122px;
+    right: 32px;
+    top: 579px;
+    padding: 0px;
+}
+
+.sin-mensajes-output{
+    width: 336px;
+    height: 58px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    text-align: center;
+    color: #343A40;
+}
+
+.caja-texto-output p{
+    width: 336px;
+    height: 48px;
+    margin-top: 16px;
+
+    font-style: normal;
+    font-weight: 510;
+    font-size: 17px;
+    line-height: 24px;
+
+    text-align: center;
+
+    color: #495057;
+}
+
+.instrucciones{
+    display: flex;
+    align-items: center; /*eje horizontal de la caja*/
+    gap: 8px;
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+}
+
+.instrucciones p{
+    width: 205px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 150%; /*para que el texto ocupe todo el alto de la caja*/
+    color: #495057;
+    opacity: 0.8; /*por que no se centre la atención en él.*/
+}
+
+.botones{
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    width: auto;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+}
+
+.botones button{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 15px;
+}
+
+.b-encriptar{
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+.b-desencriptar{
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
