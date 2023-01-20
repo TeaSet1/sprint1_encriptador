@@ -6,30 +6,31 @@
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+        
     </head>
     <body>
         <header>
             <h1 class="logo"><img src="imagenes/Logo.png" alt="logo"></h1>
         </header>
         <main>
-            <section class="caja-texto-input">
-                <h2 onclick="">Ingrese el texto aquí</h2>
+            <section class="input-box">
+                    <textarea id="input-text" name="input-text">Ingrese el texto aquí</textarea>
+                <section class="action-box">
+                        <div class="instrucciones">
+                            <img src="imagenes/bi_exclamation-circle-fill.png" alt="exclamación">
+                            <p>Solo letras minúsculas y sin acentos</p>
+                        </div>
+                        <button class="b-encriptar">Encriptar</button>
+                        <button class="b-desencriptar">Desencriptar</button>
+                </section>  
             </section>
-            <section class="caja-output">
+            <section class="output-box">
                 <img class="munheco" src="imagenes/Muñeco.png" alt="muñeco">
                 <div class="caja-texto-output">
                     <h1 class="sin-mensajes-output">Ningún mensaje fue encontrado</h1>
                     <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
-            </section>
-            <div class="instrucciones">
-                <img src="imagenes/bi_exclamation-circle-fill.png" alt="exclamación">
-                <p>Solo letras minúsculas y sin acentos</p>
-            </div>
-            <section class="botones">
-                    <button class="b-encriptar">Encriptar</button>
-                    <button class="b-desencriptar">Desencriptar</button>
             </section>
         </main>
     </body>
