@@ -17,9 +17,17 @@ body {
     background: #E5E5EC;
     resize: none;
     border: none;
+    outline: none;
     width: 100%;
     text-align: center;
 
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+#input-text::placeholder{
     font-weight: 500;
     font-size: 25px;
     line-height: 150%;
@@ -52,20 +60,20 @@ body {
     gap: 24px;
 }
 
-.botones button, .b-copiar{
+.botones button, #b-copiar{
 
     width: 100%;
     height: 67px;
     border-radius: 24px;
 }
 
-.b-encriptar{
+#b-encriptar{
 
     background: #0A3871;
     color: #FFFFFF;
 }
 
-.b-desencriptar{
+#b-desencriptar{
 
     background: #D8DFE8;
     border: 1px solid #0A3871;
@@ -85,13 +93,13 @@ body {
     border-radius: 32px;
 }
 
-.munheco{
+#munheco{
 
     display: none;
     padding: 32px;
 }
 
-.output-text-box{
+#output-text-box{
 
     display: flex;
     flex-direction: column;
@@ -111,7 +119,7 @@ body {
     color: #343A40;
 }
 
-.output-text-box p{
+#output-text-box p{
 
     font-weight: 500;
     font-size: 16px;
@@ -120,7 +128,7 @@ body {
     color: #495057;
 }
 
-.output{
+#output{
     display: none; /*flex*/
     flex-direction: column;
     gap: 32px;
@@ -128,11 +136,17 @@ body {
 }
 
 #output-text{
-    text-align: justify;
+    text-align: left;
     overflow: scroll;
+    scrollbar-width: none; /*para firefox*/
+    -ms-overflow-style: none; /*ie, edge*/
 }
 
-.b-copiar{
+#output-text::-webkit-scrollbar{
+    display: none; /*chrome, opera, safari*/
+}
+
+#b-copiar{
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -141,7 +155,9 @@ body {
     color: #0A3871;
 }
 
-.b-copiar:
+#b-encriptar:hover, #b-desencriptar:hover, #b-copiar:hover{
+    cursor: pointer;
+}
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
     header{
@@ -225,12 +241,12 @@ body {
         min-height: calc(100vh - 80px);
     }
 
-    .munheco{
+    #munheco{
         display: block;
         max-width: 85%;
     }
 
-    .output{
+    #output{
         height: 100%;
         justify-content: space-between;
     }
@@ -239,7 +255,7 @@ body {
         min-height: 700px;
     }
 
-    .b-copiar{
+    #b-copiar{
         margin-bottom: 5%;
     }
 }
