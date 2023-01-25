@@ -85,6 +85,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     margin: 40px;
 
@@ -144,6 +145,42 @@ body {
 
 #output-text::-webkit-scrollbar{
     display: none; /*chrome, opera, safari*/
+}
+
+#copied-message{
+    
+    display: none;
+    position: absolute;
+    /*transition: display 2s;
+    transition-timing-function: ease-out;*/
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 19px;
+
+    animation: fadeOut 1.5s forwards;
+    -webkit-animation: fadeOut 1.5s forwards; /* chrome, opera, safari*/
+    -moz-animation: fadeOut 1.5s forwards; /*para firefox*/
+    -ms-animation: fadeOut 1.5s forwards; /*para ie*/         
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-webkit-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
 #b-copiar{
@@ -239,6 +276,10 @@ body {
     .output-box{
         width: 100%;
         min-height: calc(100vh - 80px);
+    }
+
+    #copied-message{
+        top: 15%;
     }
 
     #munheco{
