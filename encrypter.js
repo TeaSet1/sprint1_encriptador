@@ -2,8 +2,19 @@
 var keys = ["enter", "imes", "ai", "ober", "ufat"];
 var vocales = ["e", "i", "a", "o", "u"];
 
+
 //llamamos a todos los objetos. su valor lo seleccionaremos luego.
-var outputTextBox = document.getElementById("output-text");
+var noMesagges = document.getElementById("output-text-box"); //Texto "no hay mensajes".
+
+var copiedMessage = document.getElementById("copied-message"); //mensaje "copiado".
+
+var munheco = document.getElementById("munheco");
+
+var output = document.getElementById("output"); //texto encriptado Y botón copiar.
+
+var outputText = document.getElementById("output-text"); //<p> donde sale el resultado.
+
+
 
 var encryptButton = document.getElementById("b-encriptar");
 encryptButton.onclick = function(){         //Usaremos funciones anónimas para reducir el tamaño del código y poder establecer argumentos.
@@ -17,34 +28,38 @@ decryptButton.onclick = function(){
 
 var copyButton = document.getElementById("b-copiar");
 
+
 copyButton.onclick = function(){
 
-    navigator.clipboard.writeText(outputTextBox.innerText); //innerText y no value por ser un <p>.
+    navigator.clipboard.writeText(outputText.innerText); //innerText y no value por ser un <p>.
     
-    document.getElementById("output").style.display= "none";
+    output.style.display= "none";
 
-    document.getElementById("output-text-box").style.opacity = 0;
-    document.getElementById("output-text-box").style.display= "flex";
+    noMesagges.style.opacity = 0;
+    noMesagges.style.display= "flex";
     
-    document.getElementById("copied-message").style.display = "block";
+    copiedMessage.style.display = "block";
+    
     setTimeout(function(){
-        document.getElementById("copied-message").style.display = "none"
+        copiedMessage.style.display = "none"
         if (window.matchMedia('(min-width: 1280px)').matches) {
-            document.getElementById("munheco").style.display= "block";
+            munheco.style.display= "block";
         }else{
-            document.getElementById("munheco").style.display= "none";
+            munheco.style.display= "none";
         }
-        document.getElementById("output-text-box").style.opacity = 1;
+        noMesagges.style.opacity = 1;
     }, 1200);
 };
 
+
 window.addEventListener("resize", function(){
     if(window.matchMedia("(max-width: 1280px)").matches){
-        document.getElementById("munheco").style.display = "none";
+        munheco.style.display = "none";
     }else{
-        document.getElementById("munheco").style.display = "block";
+        munheco.style.display = "block";
     }
 })
+
 
 function transform(entrada, salida){
 
@@ -57,11 +72,11 @@ function transform(entrada, salida){
         buffer = buffer.replaceAll(entrada[index], salida[index]); 
     }
     
-    document.getElementById("munheco").style.display="none";
-    document.getElementById("output-text-box").style.display="none";
-    document.getElementById("output").style.display="flex";
+    munheco.style.display="none";
+    noMesagges.style.display="none";
+    output.style.display="flex";
 
-    outputTextBox.innerText = buffer;
+    outputText.innerText = buffer;
 
     inputText.value = "";
 }
