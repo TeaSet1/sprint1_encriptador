@@ -7,11 +7,9 @@ var vocales = ["e", "i", "a", "o", "u"];
 var main = document.getElementById("main");
 
 /*var buttons = [
-
     document.getElementById("b-encriptar");
     document.getElementById("b-desencriptar");
     document.getElementById("b-copiar");
-
 ]*/
 
 var noMesagges = document.getElementById("output-text-box"); //Texto "no hay mensajes".
@@ -27,7 +25,7 @@ var outputText = document.getElementById("output-text"); //<p> donde sale el res
 
 function transform(entrada, salida){
 
-    var inputText = document.getElementById("input-text");
+    let inputText = document.getElementById("input-text");
     
     var buffer = inputText.value; //El buffer nos permite almacenar los cambios de cada iteración for.
 
@@ -68,16 +66,22 @@ function copiado(){
 }
 
 main.addEventListener("click", function(event){ //Usaremos funciones anónimas para reducir el tamaño del código y poder establecer argumentos.
-    if(event.target.id === "b-encriptar"){
-        transform(vocales, keys);
-    }
+    
+    let inputText = document.getElementById("input-text");
+    
+    if (inputText.value != "") {
 
-    if(event.target.id === "b-desencriptar"){
+       if(event.target.id === "b-encriptar"){
+        transform(vocales, keys);
+        }
+
+        if(event.target.id === "b-desencriptar"){
         transform(keys, vocales);
+        }
     }
 
     if(event.target.id === "b-copiar"){
-        copiado();
+    copiado();
     }
 });
 

@@ -73,11 +73,37 @@ body {
     color: #FFFFFF;
 }
 
+#b-encriptar:hover{
+
+    cursor: pointer;
+    background-color: #1c5287;
+}
+
+#b-encriptar:active{
+
+    background-color: #052649;
+}
+
 #b-desencriptar{
 
     background: #D8DFE8;
     border: 1px solid #0A3871;
     color: #0A3871;
+}
+
+#b-desencriptar:hover{
+
+    cursor: pointer;
+    color: #1c5287;
+    border-color: #1c5287;
+    background-color: #e6e9f5;
+}
+
+#b-desencriptar:active{
+
+    color: #052649;
+    border-color: #052649;
+    background-color: #b3b7d0;
 }
 
 .output-box{
@@ -192,8 +218,19 @@ body {
     color: #0A3871;
 }
 
-#b-encriptar:hover, #b-desencriptar:hover, #b-copiar:hover{
+#b-copiar:hover{
+
+    font-size: 17px;
     cursor: pointer;
+    color: #1c5287;
+    border: 2px solid #1c5287;
+}
+
+#b-copiar:active{
+
+    color: #052649;
+    background-color: rgb(248,248,248);
+    border-color: #052649;
 }
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
